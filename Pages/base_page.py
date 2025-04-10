@@ -13,3 +13,6 @@ class BasePage():
     
     def click(self, locator):
         self.wait.until(EC.element_to_be_clickable((By.XPATH, locator))).click()
+
+    def changeText(self, locator, text):
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, locator))).send_keys(text)
